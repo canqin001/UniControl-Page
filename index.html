@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="GlueGen">
+  <meta name="keywords" content="Image Generation, Multi-modal">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GlueGen: Plug and Play Multi-modal Encoders for X-to-image Generation</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://github.com/salesforce/GlueGen">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+
+      </div>
+
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">GlueGen: Plug and Play Multi-modal Encoders for X-to-image Generation</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+               Can Qin</a><sup>1,&dagger;</sup>&#8192;
+              </span>
+              <span class="author-block">
+               Ning Yu</a><sup>2</sup>&#8192;
+              </span>
+              <span class="author-block">
+               Chen Xing</a><sup>2</sup>&#8192;
+              </span>
+              <span class="author-block">
+               Shu Zhang</a><sup>2</sup>&#8192;
+              </span>
+              <span class="author-block">
+               Zeyuan Chen</a><sup>2</sup>&#8192;
+              </span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+               Stefano Ermon</a><sup>3</sup>&#8192;
+              </span>
+              <span class="author-block">
+               Yun Fu</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                Caiming Xiong</a><sup>2</sup>&#8192;
+              </span>
+              <span class="author-block">
+                Ran Xu</a><sup>2</sup>&#8192;
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span><sup>1</sup>Northeastern University, Boston, MA&#8192;</span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span><sup>2</sup>Salesforce AI Research, Palo Alto, CA</span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span><sup>3</sup>Stanford University, Palo Alto, CA</span>
+            </div>
+
+            <div style="font-size:15px">
+              <span><sup>&dagger;</sup>Work done when Can Qin was an intern at Salesforce AI Research, Primary Contact: qin.ca@northeastern.edu&#8192;</span></br>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2303.10056.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>PDF</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2303.10056" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>ArXiv</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/salesforce/GlueGen"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div align='center'>
+          <a><img src="figs/fig_demo_results.svg"  width="750" ></a>
+        </div>
+        <div class="content has-text-justified">
+          The proposed GlueNet is trying to provide an adaptable portal for the Stable Diffusion model to input multi-modal data, such as text, audio, (a) and (b), or text-audio hybrid signals, (c), for X-to-image generation.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            Text-to-image (T2I) models based on diffusion processes have achieved remarkable success in controllable image generation using user-provided captions. However, the tight coupling between the current text encoder and image decoder in T2I models makes it challenging to replace or upgrade. Such changes often require massive fine-tuning or even training from scratch with the prohibitive expense. To address this problem, we propose GlueGen, which applies a newly proposed GlueNet model to align features from single-modal or multi-modal encoders with the latent space of an existing T2I model. The approach introduces a new training objective that leverages parallel corpora to align the representation spaces of different encoders. Empirical results show that GlueNet can be trained efficiently and enables various capabilities beyond previous state-of-the-art models: 1) multilingual language models such as XLM-Roberta can be aligned with existing T2I models, allowing for the generation of high-quality images from captions beyond English; 2) GlueNet can align multi-modal encoders such as AudioCLIP with the Stable Diffusion model, enabling sound-to-image generation; 3) it can also upgrade the current text encoder of the latent diffusion model for challenging case generation. By the alignment of various feature representations, the GlueNet allows for flexible and efficient integration of new functionality into existing T2I models and sheds light on X-to-image (X2I) generation.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div align='center'>
+          <a><img src="figs/framework_new_iccv.svg"  width="850" ></a>
+        </div>
+        <div class="content has-text-justified">
+          With the proposed GlueNet model of the GlueGen framework, the pre-trained image generator (i.e., UNet) can be bridged to off-the-shelf single- or multi-modal encoders to expand their functionalities, i.e., multilingual/sound-to-image generation, within a limited budget. GlueNet is trained offline and does not require back-propagation of UNet and image-text pairs for training. Therefore, GlueGen is flexible and efficient to achieve.
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+
+          <h2 class="title is-3" align='center'>Sound and Sound/text-to-image Generation <br>  (AudioCLIP + GlueNet + Stable Diffusion)</h2>
+
+          <p align="center">
+            <a><img src="figs/fig_sound_results_1.svg" width="750" ></a>
+          </p>
+          Beyond the text signals, the proposed GlueNet also achieves sound-to-image generation, i.e., (a) and (b), and image generation via sound-text-mix signals, i.e., (c), by aligning the CLIP text encoder with AudioCLIP audio encoders. 
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+
+          <h2 class="title is-3" align='center'> Monolingual Text-to-image Generation <br> (T5-3B + GlueNet + Latent Diffusion)</h2>
+
+          <p align="center">
+            <a><img src="figs/Db_wn_demo_filtered.svg" width="750" ></a>
+          </p>
+          Monolingual text-to-image generation in resolution 256 $\times$ 256 with guidance weight 7.5 and DDIM steps 200.
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+        
+          <h2 class="title is-3" align='center'>Multilingual Text-to-image Generation <br> (XLM-Roberta-L + GlueNet + Stable Diffusion)</h2>
+          <br /> 
+          <p align="center">
+            <a><img src="figs/multi_garden.svg"  width="850" ></a>
+          </p>
+          Multilingual generation results in resolution 512 * 512  of XLM-Roberta + Glue-Net + SDM decoder (sd-v1-4) with the same caption, ``afternoon garden oil painting painted by impressionists". With the help of different Glue-Nets and multilingual text encoder, the SDM decoder can support different languages including Japanese, Italian, Chinese, French and Spanish. The guidance weight is assigned as 7.5 and PLMS sampling steps are 50.
+
+          <br /> <br /> 
+          <p align="center">
+            <a><img src="figs/Hybrid-languages.svg"  width="850" ></a>
+          </p>
+          Hybrid multilingual generation in resolution of 512 * 512. There are three-different-language texts in the input caption including  Chinese, Japanese and English. The caption of (a) is ``colorful, a cat painted by Picasso, sit on a table, is eating food'' and the caption of (b) is ``a white, sedan, crash into a building''. With our GlueNet infused ahead, the XLM-Roberta can guide SDM decoder to generate reasonable results where the original SDM fails to work.
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{qin2023gluegen,
+        title={GlueGen: Plug and Play Multi-modal Encoders for X-to-image Generation},
+        author={Qin, Can and Yu, Ning and Xing, Chen and Zhang, Shu and Chen, Zeyuan and Ermon, Stefano and Fu, Yun and Xiong, Caiming and Xu, Ran},
+        journal={arXiv preprint arXiv:2303.10056},
+        year={2023}
+      }</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div align="center" class="container">
+      <div class="columns is-centered">
+        <div class="content">
+          This website is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
