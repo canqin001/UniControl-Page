@@ -6,7 +6,7 @@
   <meta name="description" content="GlueGen">
   <meta name="keywords" content="Image Generation, Multi-modal">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GlueGen: Plug and Play Multi-modal Encoders for X-to-image Generation</title>
+  <title>UniControl: A Unified Diffusion Model for Controllable Visual Generation In the Wild</title>
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
@@ -35,7 +35,7 @@
     </div>
     <div class="navbar-menu">
       <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-        <a class="navbar-item" href="https://github.com/salesforce/GlueGen">
+        <a class="navbar-item" href="https://github.com/salesforce/UniControl">
           <span class="icon">
             <i class="fas fa-home"></i>
           </span>
@@ -52,58 +52,85 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">GlueGen: Plug and Play Multi-modal Encoders for X-to-image Generation</h1>
+            <h1 class="title is-1 publication-title">UniControl: A Unified Diffusion Model for Controllable Visual Generation In the Wild</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-               Can Qin</a><sup>1,&dagger;</sup>&#8192;
+               Can Qin</a><sup>1,2,&dagger;</sup>&#8192;
               </span>
               <span class="author-block">
-               Ning Yu</a><sup>2</sup>&#8192;
+                Shu Zhang</a><sup>1</sup>&#8192;
+               </span>
+              <span class="author-block">
+               Ning Yu</a><sup>1</sup>&#8192;
               </span>
               <span class="author-block">
-               Chen Xing</a><sup>2</sup>&#8192;
+               Yihao Feng</a><sup>1</sup>&#8192;
               </span>
               <span class="author-block">
-               Shu Zhang</a><sup>2</sup>&#8192;
+                Xinyi Yang</a><sup>1</sup>&#8192;
               </span>
               <span class="author-block">
-               Zeyuan Chen</a><sup>2</sup>&#8192;
+                Yingbo Zhou</a><sup>1</sup>&#8192;
               </span>
-            </div>
-            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                Huan Wang</a><sup>1</sup>&#8192;
+              </span>
+              <span class="author-block">
+                Yingbo Zhou</a><sup>1</sup>&#8192;
+              </span>
+              <span class="author-block">
+                Juan Carlos Niebles</a><sup>1</sup>&#8192;
+              </span>
+              <span class="author-block">
+                Caiming Xiong</a><sup>1</sup>&#8192;
+              </span>
+              <span class="author-block">
+                Silvio Savarese</a><sup>1</sup>&#8192;
+              </span>
+            <!-- </div>
+            <div class="is-size-5 publication-authors"> -->
               <span class="author-block">
                Stefano Ermon</a><sup>3</sup>&#8192;
               </span>
               <span class="author-block">
-               Yun Fu</a><sup>1</sup>
-              </span>
+                Yun Fu </a><sup>2</sup>
+               </span>
               <span class="author-block">
-                Caiming Xiong</a><sup>2</sup>&#8192;
-              </span>
-              <span class="author-block">
-                Ran Xu</a><sup>2</sup>&#8192;
+                Ran Xu</a><sup>1</sup>&#8192;
               </span>
             </div>
-
             <div class="is-size-5 publication-authors">
-              <span><sup>1</sup>Northeastern University, Boston, MA&#8192;</span>
+              <span><sup>1</sup>Salesforce AI, Palo Alto, CA</span>
             </div>
             <div class="is-size-5 publication-authors">
-              <span><sup>2</sup>Salesforce AI Research, Palo Alto, CA</span>
+              <span><sup>2</sup>Northeastern University, Boston, MA&#8192;</span>
             </div>
             <div class="is-size-5 publication-authors">
               <span><sup>3</sup>Stanford University, Palo Alto, CA</span>
             </div>
 
             <div style="font-size:15px">
-              <span><sup>&dagger;</sup>Work done when Can Qin was an intern at Salesforce AI Research, Primary Contact: qin.ca@northeastern.edu&#8192;</span></br>
+              <span><sup>&dagger;</sup>Work done when Can Qin was an intern at Salesforce AI&#8192;</span></br>
             </div>
+
+
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <p align="center">
+            <a><img src="figs/logo.svg" width="500" ></a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
 
             <div class="column has-text-centered">
               <div class="publication-links">
                 <!-- PDF Link. -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2303.10056.pdf"
+                  <a href="https://arxiv.org/pdf/"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -112,7 +139,7 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2303.10056" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://arxiv.org/pdf/" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
@@ -121,12 +148,12 @@
                 </span>
                 <!-- Code Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/salesforce/GlueGen"
+                  <a href="https://github.com/salesforce/UniControl"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code</span>
+                    <span>Code (coming soon)</span>
                   </a>
                 </span>
               </div>
@@ -142,10 +169,10 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <div align='center'>
-          <a><img src="figs/fig_demo_results.svg"  width="750" ></a>
+          <a><img src="figs/demo_all_v2_lr.svg"  width="750" ></a>
         </div>
         <div class="content has-text-justified">
-          The proposed GlueNet is trying to provide an adaptable portal for the Stable Diffusion model to input multi-modal data, such as text, audio, (a) and (b), or text-audio hybrid signals, (c), for X-to-image generation.
+          UniControl is trained with multiple tasks with a unified model, and it further demonstrates promising capability in zero-shot tasks generalization with visual example results shown above.
         </div>
       </div>
     </div>
@@ -158,7 +185,7 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
-            Text-to-image (T2I) models based on diffusion processes have achieved remarkable success in controllable image generation using user-provided captions. However, the tight coupling between the current text encoder and image decoder in T2I models makes it challenging to replace or upgrade. Such changes often require massive fine-tuning or even training from scratch with the prohibitive expense. To address this problem, we propose GlueGen, which applies a newly proposed GlueNet model to align features from single-modal or multi-modal encoders with the latent space of an existing T2I model. The approach introduces a new training objective that leverages parallel corpora to align the representation spaces of different encoders. Empirical results show that GlueNet can be trained efficiently and enables various capabilities beyond previous state-of-the-art models: 1) multilingual language models such as XLM-Roberta can be aligned with existing T2I models, allowing for the generation of high-quality images from captions beyond English; 2) GlueNet can align multi-modal encoders such as AudioCLIP with the Stable Diffusion model, enabling sound-to-image generation; 3) it can also upgrade the current text encoder of the latent diffusion model for challenging case generation. By the alignment of various feature representations, the GlueNet allows for flexible and efficient integration of new functionality into existing T2I models and sheds light on X-to-image (X2I) generation.
+            Achieving machine autonomy and human control often represent divergent objectives in the design of interactive AI systems. Visual generative foundation models such as Stable Diffusion show promise in navigating these goals, especially when prompted with arbitrary languages. However, they often fall short in generating images with spatial, structural, or geometric controls. The integration of such controls, which can accommodate various visual conditions in a single unified model, remains an unaddressed challenge. In response, we introduce UniControl, a new generative foundation model that consolidates a wide array of controllable condition-to-image (C2I) tasks within a singular framework, while still allowing for arbitrary language prompts. UniControl enables pixel-level-precise image generation, where visual conditions primarily influence the generated structures and language prompts guide the style and context. To equip UniControl with the capacity to handle diverse visual conditions, we augment pretrained text-to-image diffusion models and introduce a task-aware HyperNet to modulate the diffusion models, enabling the adaptation to different C2I tasks simultaneously. Trained on nine unique C2I tasks, UniControl demonstrates impressive zero-shot generation abilities with unseen visual conditions. Experimental results show that UniControl often surpasses the performance of single-task-controlled methods of comparable model sizes. This control versatility positions UniControl as a significant advancement in the realm of controllable visual generation. 
           </div>
         </div>
       </div>
@@ -169,10 +196,10 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <div align='center'>
-          <a><img src="figs/framework_new_iccv.svg"  width="850" ></a>
+          <a><img src="figs/method.svg"  width="850" ></a>
         </div>
         <div class="content has-text-justified">
-          With the proposed GlueNet model of the GlueGen framework, the pre-trained image generator (i.e., UNet) can be bridged to off-the-shelf single- or multi-modal encoders to expand their functionalities, i.e., multilingual/sound-to-image generation, within a limited budget. GlueNet is trained offline and does not require back-propagation of UNet and image-text pairs for training. Therefore, GlueGen is flexible and efficient to achieve.
+          This figure shows our proposed UniControl method. To accommodate diverse tasks, we've designed a Mixture of Experts (MOE) Adapter, containing roughly ~70K #params for each task, and a Task-aware HyperNet (~12M #params) to modulate N (i.e., 7) zero-conv layers. This structure allows for multi-task functionality within a singular model, significantly reducing the model size compared to an equivalent stack of single-task models, each with around 1.4B #params.
         </div>
       </div>
     </div>
@@ -184,12 +211,12 @@
       <div class="columns is-centered">
         <div class="column is-full-width">
 
-          <h2 class="title is-3" align='center'>Sound and Sound/text-to-image Generation <br>  (AudioCLIP + GlueNet + Stable Diffusion)</h2>
+          <h2 class="title is-3" align='center'>Pre-training Tasks Results</h2>
 
           <p align="center">
-            <a><img src="figs/fig_sound_results_1.svg" width="750" ></a>
+            <a><img src="figs/main_result_lr.svg" width="750" ></a>
           </p>
-          Beyond the text signals, the proposed GlueNet also achieves sound-to-image generation, i.e., (a) and (b), and image generation via sound-text-mix signals, i.e., (c), by aligning the CLIP text encoder with AudioCLIP audio encoders. 
+          Visual comparison between official or re-implemented task-specific ControlNet and our proposed model. The example data is collected from our testing set sampled from COCO and Laion.
         </div>
       </div>
     </div>
@@ -201,12 +228,12 @@
       <div class="columns is-centered">
         <div class="column is-full-width">
 
-          <h2 class="title is-3" align='center'> Monolingual Text-to-image Generation <br> (T5-3B + GlueNet + Latent Diffusion)</h2>
+          <h2 class="title is-3" align='center'> Zero-shot Tasks Results</h2>
 
           <p align="center">
-            <a><img src="figs/Db_wn_demo_filtered.svg" width="750" ></a>
+            <a><img src="figs/zero_shot_result_all.svg" width="750" ></a>
           </p>
-          Monolingual text-to-image generation in resolution 256 $\times$ 256 with guidance weight 7.5 and DDIM steps 200.
+          (a)-(b): Example results of UniControl over hybrid  (unseen combination) conditions with key words "background" and "foreground" attached in prompts. (c)-(e): Example results of UniControl on three unseen tasks (deblurring, colorization, inpainting)
 
         </div>
       </div>
@@ -217,32 +244,8 @@
 
 
 
-  <section class="section">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column is-full-width">
-        
-          <h2 class="title is-3" align='center'>Multilingual Text-to-image Generation <br> (XLM-Roberta-L + GlueNet + Stable Diffusion)</h2>
-          <br /> 
-          <p align="center">
-            <a><img src="figs/multi_garden.svg"  width="850" ></a>
-          </p>
-          Multilingual generation results in resolution 512 * 512  of XLM-Roberta + Glue-Net + SDM decoder (sd-v1-4) with the same caption, ``afternoon garden oil painting painted by impressionists". With the help of different Glue-Nets and multilingual text encoder, the SDM decoder can support different languages including Japanese, Italian, Chinese, French and Spanish. The guidance weight is assigned as 7.5 and PLMS sampling steps are 50.
-
-          <br /> <br /> 
-          <p align="center">
-            <a><img src="figs/Hybrid-languages.svg"  width="850" ></a>
-          </p>
-          Hybrid multilingual generation in resolution of 512 * 512. There are three-different-language texts in the input caption including  Chinese, Japanese and English. The caption of (a) is ``colorful, a cat painted by Picasso, sit on a table, is eating food'' and the caption of (b) is ``a white, sedan, crash into a building''. With our GlueNet infused ahead, the XLM-Roberta can guide SDM decoder to generate reasonable results where the original SDM fails to work.
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <section class="section" id="BibTeX">
+  
+  <!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@article{qin2023gluegen,
@@ -252,7 +255,7 @@
         year={2023}
       }</code></pre>
     </div>
-  </section>
+  </section> -->
 
 
   <footer class="footer">
