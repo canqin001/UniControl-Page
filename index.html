@@ -169,7 +169,7 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <div align='center'>
-          <a><img src="figs/demo_all_v2_lr.svg"  width="750" ></a>
+          <a><img src="figs/demo_all_v2_lr.svg" width="95%" height="120%"  ></a>
         </div>
         <div class="content has-text-justified">
           UniControl is trained with multiple tasks with a unified model, and it further demonstrates promising capability in zero-shot tasks generalization with visual example results shown above.
@@ -196,7 +196,7 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <div align='center'>
-          <a><img src="figs/method.svg"  width="850" ></a>
+          <a><img src="figs/method.svg"  width="95%" height="120%" ></a>
         </div>
         <div class="content has-text-justified">
           This figure shows our proposed UniControl method. To accommodate diverse tasks, we've designed a Mixture of Experts (MOE) Adapter, containing roughly ~70K #params for each task, and a Task-aware HyperNet (~12M #params) to modulate N (i.e., 7) zero-conv layers. This structure allows for multi-task functionality within a singular model, significantly reducing the model size compared to an equivalent stack of single-task models, each with around 1.4B #params.
@@ -214,7 +214,7 @@
           <h2 class="title is-3" align='center'>Pre-training Tasks Results</h2>
 
           <p align="center">
-            <a><img src="figs/main_result_lr.svg" width="750" ></a>
+            <a><img src="figs/main_result.svg" width="95%" height="120%" ></a>
           </p>
           Visual comparison between official or re-implemented task-specific ControlNet and our proposed model. The example data is collected from our testing set sampled from COCO and Laion.
         </div>
@@ -231,7 +231,7 @@
           <h2 class="title is-3" align='center'> Zero-shot Tasks Results</h2>
 
           <p align="center">
-            <a><img src="figs/zero_shot_result_all.svg" width="750" ></a>
+            <a><img src="figs/zero_shot_result_all.svg" width="95%" height="120%" ></a>
           </p>
           (a)-(b): Example results of UniControl over hybrid  (unseen combination) conditions with key words "background" and "foreground" attached in prompts. (c)-(e): Example results of UniControl on three unseen tasks (deblurring, colorization, inpainting)
 
@@ -240,22 +240,40 @@
     </div>
   </section>
 
+ <section class="section" id="Gradio Demo Video">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+           <h2 class="title is-3" align='center'>Gradio Demo Video</h2>
+          <p align="center">
+           <video controls width="900">
+             <source src="figs/gradio_video.mp4" type="video/mp4">
+           </video>
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+ 
 
 
+
+
+<!-- <a href="figs/gradio_video.mp4" title="APP Demo Video">Demo Video</a> -->
 
 
   
-  <!-- <section class="section" id="BibTeX">
+  <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@article{qin2023gluegen,
-        title={GlueGen: Plug and Play Multi-modal Encoders for X-to-image Generation},
-        author={Qin, Can and Yu, Ning and Xing, Chen and Zhang, Shu and Chen, Zeyuan and Ermon, Stefano and Fu, Yun and Xiong, Caiming and Xu, Ran},
-        journal={arXiv preprint arXiv:2303.10056},
-        year={2023}
-      }</code></pre>
+      <pre><code>@article{qin2023unicontrol,
+  title={UniControl: A Unified Diffusion Model for Controllable Visual Generation In the Wild},
+  author={Qin, Can and Zhang, Shu and Yu, Ning and Feng, Yihao and Yang, Xinyi and Zhou, Yingbo and Wang, Huan and Niebles, Juan Carlos and Xiong, Caiming and Savarese, Silvio and others},
+  journal={arXiv preprint arXiv:2305.11147},
+  year={2023}
+}</code></pre>
     </div>
-  </section> -->
+  </section>
 
 
   <footer class="footer">
